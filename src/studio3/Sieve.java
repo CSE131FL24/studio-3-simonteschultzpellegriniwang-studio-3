@@ -24,7 +24,7 @@ public class Sieve {
 		for (int i = 0; i <= num; i++) {
 			if (allnum[i] != 0) {
 				for (int j = 2; j * allnum[i] <= num; j++) {
-					allnum[j * allnum[i]] = 0;
+					allnum[j * allnum[i] - 2] = 0;				
 				}
 			}
 		}
