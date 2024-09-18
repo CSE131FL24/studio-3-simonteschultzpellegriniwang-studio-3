@@ -1,6 +1,5 @@
 package studio3;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Sieve {
@@ -15,7 +14,6 @@ public class Sieve {
 		int num = in.nextInt();
 		
 		int[] allnum = new int[num + 1];
-		int[] compnum = new int[num + 1];
 			
 		for (int i = 2; i <= num; i++) {
 			allnum[i-2] = i;
@@ -29,8 +27,10 @@ public class Sieve {
 			}
 		}
 		
-		System.out.println(Arrays.toString(allnum));
-			
+		for (int i = 0; i <= num; i++) {
+			if (allnum[i] != 0) {
+				System.out.println(allnum[i]);
+			}
+		}		
 	}
-
 }
